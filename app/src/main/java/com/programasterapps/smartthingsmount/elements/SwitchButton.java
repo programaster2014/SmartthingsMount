@@ -5,19 +5,22 @@ import android.support.v7.widget.AppCompatButton;
 
 public class SwitchButton extends AppCompatButton {
     private String ID;
-    private boolean isOn;
+    private String status;
 
-    public SwitchButton(Context context, String ID, boolean status){
+    public SwitchButton(Context context, String ID, String status){
         super(context);
         this.ID = ID;
-        this.isOn = status;
+        this.status = status;
     }
 
-    public void setIsOn(boolean status){
-        this.isOn = status;
+    public void setStatus(String status){
+        this.status = status;
     }
 
     public boolean getIsOn(){
-        return this.isOn;
+        if(this.status.equals("on")){
+            return true;
+        }
+        return false;
     }
 }

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
+import com.programasterapps.smartthingsmount.fragments.RoutineFragment;
+import com.programasterapps.smartthingsmount.fragments.SwitchesFragment;
 import com.programasterapps.smartthingsmount.updates.RoutineUpdates;
 import com.programasterapps.smartthingsmount.updates.SwitchUpdates;
 
@@ -12,6 +14,10 @@ import java.util.HashMap;
 public class CommunicationHandler extends Handler{
 
     private MainActivity activity;
+
+    //Fragments
+    RoutineFragment routineFragment;
+    SwitchesFragment switchesFragment;
 
     public CommunicationHandler(MainActivity mainActivity) {
         this.activity = mainActivity;
